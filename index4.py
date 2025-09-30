@@ -1,7 +1,6 @@
 import numpy as np
 import nnfs
 from nnfs.datasets import spiral_data
-import matplotlib.pyplot as plt
 nnfs.init()
 
     
@@ -44,6 +43,7 @@ activation1 = Activation_ReLU()
 dense2 = Layer_Dense(3, 3)
 activation2 = Activation_Softmax()
 
+#in each layer we do the computations first and then apply the activation function later
 dense1.forward(X)
 
 activation1.forward(dense1.output)
